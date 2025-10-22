@@ -1,8 +1,9 @@
-**⚠️ This polyfill was originally hosted in the [IntersectionObserver spec](https://github.com/w3c/IntersectionObserver) repo. Refer to that repo for commit history.**
+> [!WARNING]
+> This polyfill is no longer needed and **should not be used**. The [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#browser_compatibility) is supported in all browser engines and has been [Baseline since 2019](https://webstatus.dev/features/intersection-observer). Sites currently using this polyfill can safely remove it.
 
 # `IntersectionObserver` polyfill
 
-This library polyfills the native [`IntersectionObserver`](http://w3c.github.io/IntersectionObserver/) API in unsupporting browsers. See the [API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for usage information.
+This library polyfills the native [`IntersectionObserver`](http://w3c.github.io/IntersectionObserver/) API in unsupporting browsers. See the [API documentation](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API) for usage information.
 
 - [Installation](#installation)
 - [Configuring the polyfill](#configuring-the-polyfill)
@@ -158,55 +159,9 @@ createMessagingChannel(parent, function(port) {
 });
 ```
 
-
 ## Limitations
 
 This polyfill does not support the [proposed v2 additions](https://github.com/szager-chromium/IntersectionObserver/blob/v2/explainer.md), as these features are not currently possible to do with JavaScript and existing web APIs.
-
-## Browser support
-
-The polyfill has been tested and known to work in the latest version of all browsers.
-
-Legacy support is also possible in very old browsers by including a shim for ES5 as well as the `window.getComputedStyle` method. The easiest way to load the IntersectionObserver polyfill and have it work in the widest range of browsers is via [polyfill.io](https://cdn.polyfill.io/v3/), which will automatically include dependencies where necessary:
-
-```html
-<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-```
-
-With these polyfills, `IntersectionObserver` has been tested and known to work in the following browsers:
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/chrome/chrome_48x48.png" alt="Chrome"><br>
-      ✔
-    </td>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/firefox/firefox_48x48.png" alt="Firefox"><br>
-      ✔
-    </td>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/safari/safari_48x48.png" alt="Safari"><br>
-      6+
-    </td>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/edge/edge_48x48.png" alt="Edge"><br>
-      ✔
-    </td>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/archive/internet-explorer_7-8/internet-explorer_7-8_48x48.png" alt="Internet Explorer"><br>
-      7+
-    </td>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/opera/opera_48x48.png" alt="Opera"><br>
-      ✔
-    </td>
-    <td align="center">
-      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/android/android_48x48.png" alt="Android"><br>
-      4.4+
-    </td>
-  </tr>
-</table>
 
 ## Running the tests
 
